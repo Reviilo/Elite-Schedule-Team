@@ -13,16 +13,14 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'team-detail.html',
 })
 export class TeamDetailPage {
-  
-  public team: any = {};
 
+  public team: any = {};
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.team = this.navParams.data;
-    console.log('**nav params**', this.navParams);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TeamDetailPage');
+  goHome() {
+    this.navCtrl.parent.parent.popToRoot();
   }
 
 }

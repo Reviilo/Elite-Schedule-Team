@@ -14,11 +14,6 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class StandingsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad StandingsPage');
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
 }
