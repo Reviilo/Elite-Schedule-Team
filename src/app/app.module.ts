@@ -15,6 +15,8 @@ import { TeamDetailPage } from '../pages/team-detail/team-detail';
 import { TournamentsPage } from '../pages/tournaments/tournaments';
 import { StandingsPage } from '../pages/standings/standings';
 import { TeamHomePage } from '../pages/team-home/team-home';
+import { EliteApi } from '../providers/elite-api/elite-api';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { TeamHomePage } from '../pages/team-home/team-home';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -45,7 +48,8 @@ import { TeamHomePage } from '../pages/team-home/team-home';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    EliteApi
   ]
 })
 export class AppModule {}
